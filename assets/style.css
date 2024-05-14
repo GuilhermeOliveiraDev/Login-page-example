@@ -5,6 +5,12 @@
     --cinza: #7C7C7C;
   }
 
+html, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 aside{
     flex: 6;
     background-color: var(--vermelho);    background-image: url('./loginmain.png');
@@ -15,17 +21,17 @@ main{
     flex: 4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 form {
     width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     background-color: aquamarine;
-
+    align-items: center;
 }
 
 label{
@@ -39,7 +45,6 @@ h1{
     font-size: 2.6rem;
     line-height: 3.9rem;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -62,21 +67,64 @@ p{
 button{
     color: #fff;
     background-color: var(--vermelho);    border-radius: 12px;
+    height: 46px;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover{
+    transform: scale(1.1);
 }
 
 a{
     color: var(--vermelho);}
 
+form > div {
+    width: 100%;
+}
+
 .input{
-    color: var(--cinza);;
+    color: var(--cinza);
     font-family: Inter;
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 40px;
     padding-left: 40px;
-    gap: 0px;
     border: 1px solid var(--cinza);
     border-radius: 8px;
+    background-color: plum;
+    width: 100%;
+}
+
+.icon{
+    position: absolute;
+}
+
+/* .user{
+    
+}
+
+.lock{
+
+}
+
+.eye{
+
+} */
+
+label{
+    color: var(--cinza);;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 0.75rem;
+}
+
+.rememberme{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .container{
@@ -86,3 +134,14 @@ a{
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+.checkbox{
+    width: 15px;
+    height: 15px;
+    border: var(--cinza) 1px solid;
+    border-radius: 2px;
+}
+
+.checkbox:checked {
+    accent-color: var(--vermelho);
+  }

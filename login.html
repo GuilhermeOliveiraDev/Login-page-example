@@ -9,16 +9,23 @@
 </head>
 <body>
     <div class="container">
-        <aside>
+        <aside role="img" aria-label="Uma pizza em um forno a lenha do lado esquerdo da tela">
         </aside>
         <main>
             <h1><img src="assets/logo.svg" alt="Logo" srcset="">SmartOrder</h1>
-            <h2>Login</h2>
             <form action="login" method="none">
-                <input type="text" name="user" class="input" placeholder="Nome de usuário">
-                <input type="password" name="password" class="input" placeholder="Senha">
+                <h2>Login</h2>
+                <div>
+                    <span class="icon user"></span>                
+                    <input type="text" name="user" class="input" placeholder="Nome de usuário">
+                </div>
+                <div>
+                    <span class="icon lock"></span>
+                    <input type="password" name="password" class="input" placeholder="Senha">
+                    <span class="icon eye"></span>
+                </div>
                 <div class="rememberme">
-                    <input type="checkbox" name="remember">
+                    <input type="checkbox" name="remember" class="checkbox" checked>
                     <label for="remember">Lembrar-me</label>
                 </div>
                 <button type="submit">Login</button>
