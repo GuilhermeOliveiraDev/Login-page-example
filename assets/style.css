@@ -13,7 +13,7 @@ html, *{
 
 aside{
     flex: 6;
-    background-color: var(--vermelho);    background-image: url('./loginmain.png');
+    background-image: url('./loginmain.png');
     background-position: center;
     background-size: cover;
 }
@@ -26,11 +26,9 @@ main{
 }
 
 form {
-    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: aquamarine;
     align-items: center;
 }
 
@@ -64,16 +62,17 @@ p{
     line-height: 0.75rem;
 }
 
-button{
+button[type="submit"]{
     color: #fff;
-    background-color: var(--vermelho);    border-radius: 12px;
+    background-color: var(--vermelho);    
+    border-radius: 12px;
     height: 46px;
     border: none;
     transition: 0.2s;
     cursor: pointer;
     width: 100%;
 }
-button:hover{
+button[type="submit"]:hover{
     transform: scale(1.1);
 }
 
@@ -91,33 +90,59 @@ form > div {
     font-weight: 400;
     line-height: 40px;
     padding-left: 40px;
+    padding-right: 40px;
     border: 1px solid var(--cinza);
     border-radius: 8px;
-    background-color: plum;
     width: 100%;
+}
+
+.input-container{
+    position: relative;
+    
 }
 
 .icon{
     position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 25%;
+    background-size: contain;
 }
 
-/* .user{
-    
+.user{
+    left: 5px;
+    background-image: url('./icons/user.svg');
 }
 
 .lock{
-
+    left: 5px;
+    background-image: url('./icons/lock.svg');
 }
 
 .eye{
+    border: none;
+    right: 5px;
+    background-image: url('./icons/eye-password.svg');
+    width: 24px;
+    height: 24px;
+}
 
-} */
+.eye::after{
+    content: url('./icons/Line.svg');
+    transition: all 0.3s ease-in-out;
+    width: 5px;
+    height: 5px;
+}
+
+.eye.hide-icon::after {
+    opacity: 0;
+}
 
 label{
     color: var(--cinza);;
     font-family: Inter;
-    font-size: 0.625rem;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
     line-height: 0.75rem;
 }
 
