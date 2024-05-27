@@ -107,6 +107,7 @@ form > div {
     height: 24px;
     top: 25%;
     background-size: contain;
+    background-color: transparent;
 }
 
 .user{
